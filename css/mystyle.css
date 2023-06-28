@@ -1,10 +1,53 @@
+/* rubik-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/rubik-v26-latin-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* rubik-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/rubik-v26-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* rubik-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/rubik-v26-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* rubik-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/rubik-v26-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* rubik-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/rubik-v26-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 /* general classes  -------------------------------------------- */
 body {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
   background-color: rgb(27, 39, 39);
   color: aliceblue;
   padding: 0 4rem 0 4rem;
-  max-width: 1140px;
+  width: auto;
+  max-width: 90rem; /* 1440 px */
   margin: auto;
 }
 h1,
@@ -15,10 +58,20 @@ h5,
 h6 {
   font-weight: 200;
 }
+h1 {
+  font-size: 2.5rem;
+}
 h2 {
-  margin-top: 3rem;
+  font-weight: 500;
+  margin-top: 4rem;
+  font-size: 1.8rem;
 }
 h3 {
+  font-weight: 500;
+  font-size: 1.3rem;
+  letter-spacing: 0.05rem;
+}
+h4 {
   text-transform: uppercase;
   letter-spacing: 0.15rem;
   color: rgba(0, 255, 255, 0.511);
@@ -69,6 +122,7 @@ footer {
   background-image: url("../imgs/ga-mood-image.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: bottom;
   border-radius: 1rem;
 }
 
@@ -89,9 +143,6 @@ footer {
   flex-wrap: wrap;
   gap: 3rem;
   justify-content: center;
-  border: 1px solid rgba(64, 224, 208, 0.138);
-  padding: 1.5rem;
-  border-radius: 1rem;
 }
 .container__links ul {
   display: flex;
@@ -110,6 +161,10 @@ footer {
   color: orangered;
 }
 
+figcaption {
+  margin-top: 1rem;
+}
+
 /* specific classes -------------------------------------------- */
 .list-hobbies {
   display: flex;
@@ -118,25 +173,28 @@ footer {
   flex-wrap: wrap;
 }
 .list-hobbies li {
-  border: 1px solid rgba(64, 224, 208, 0.272);
+  border: 1px solid rgba(64, 224, 208, 0.138);
   padding: 0.1rem 0.6rem;
   border-radius: 0.3rem;
   width: max-content;
   background-color: rgba(55, 55, 55, 0.158);
 }
-.social-item {
+.social-item a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 1px solid rgba(64, 224, 208, 0.138);
+  padding: 1.6rem 1.6rem;
+  border-radius: 0.3rem;
 }
-.social-item svg:hover {
+.social-item a:hover {
   filter: hue-rotate(0deg) saturate(10000%);
 }
 .social-item p {
-  border-bottom: 2px solid orangered;
+  border-top: 2px solid orangered;
   width: min-content;
   text-align: center;
-  padding-bottom: 0.7rem;
+  padding-top: 1.2rem;
   align-self: center;
 }
 .svg-social {
@@ -148,7 +206,7 @@ footer {
   width: 100%;
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .gallery-wrapper img {
@@ -157,7 +215,7 @@ footer {
 }
 
 .list-links li {
-  border: 1px solid rgba(64, 224, 208, 0.272);
+  border: 1px solid rgba(64, 224, 208, 0.138);
   border-radius: 0.3rem;
   width: max-content;
   background-color: rgba(55, 55, 55, 0.158);
