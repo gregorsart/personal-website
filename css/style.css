@@ -57,8 +57,10 @@ body {
   margin: auto;
 }
 main,
-header {
-  padding: 0 4rem 0 4rem;
+header,
+footer {
+  padding: 0 var(--main-layout-padding-desktop) 0
+    var(--main-layout-padding-desktop);
 }
 h1,
 h2,
@@ -99,7 +101,8 @@ a {
   color: aqua;
   text-decoration: none;
 }
-nav a:hover {
+nav a:hover,
+footer a:hover {
   color: aquamarine;
   border-bottom: 2px solid orangered;
   padding-bottom: 0.3rem;
@@ -247,6 +250,21 @@ figcaption {
   background-color: rgba(55, 55, 55, 0.158);
 }
 
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__left {
+  max-width: 15rem;
+}
+
+.footer__right {
+  display: flex;
+  gap: 1.5rem;
+  height: 2rem;
+}
+
 /* Tablet & Moblie --------------------------------------------- */
 
 @media (width <= 670px) {
@@ -256,7 +274,8 @@ figcaption {
     align-items: start;
   }
   main,
-  header {
+  header,
+  footer {
     padding: 0 2rem 0 2rem;
   }
   .container__social .social-item {
