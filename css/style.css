@@ -44,6 +44,8 @@
   --main-layout-widh: 90rem;
   --main-layout-padding-desktop: 4rem;
   --main-gallery-gap-desktop: 2rem;
+
+  --color-green-transparent: rgba(64, 224, 208, 0.138);
 }
 
 /* general classes  -------------------------------------------- */
@@ -168,7 +170,7 @@ footer {
   row-gap: 0.6em;
   flex-wrap: wrap;
   justify-content: space-between;
-  border: 1px solid rgba(64, 224, 208, 0.138);
+  border: 1px solid var(--color-green-transparent);
   padding: 1.5rem;
   border-radius: 1rem;
 }
@@ -212,7 +214,7 @@ footer {
 }
 
 .list-hobbies li {
-  border: 1px solid rgba(64, 224, 208, 0.138);
+  border: 1px solid var(--color-green-transparent);
   padding: 0.1rem 0.6rem;
   border-radius: 0.3rem;
   width: max-content;
@@ -223,7 +225,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid rgba(64, 224, 208, 0.138);
+  border: 1px solid var(--color-green-transparent);
   padding: 1.6rem 1.6rem;
   border-radius: 0.3rem;
 }
@@ -274,7 +276,7 @@ footer {
 
 .list-links li,
 .list-music li {
-  border: 1px solid rgba(64, 224, 208, 0.138);
+  border: 1px solid var(--color-green-transparent);
   border-radius: 0.3rem;
   width: max-content;
   background-color: rgba(55, 55, 55, 0.158);
@@ -293,6 +295,35 @@ footer {
   display: flex;
   gap: 1.5rem;
   height: 2rem;
+}
+
+/* utility classes ga */
+
+/* utility classes */
+.ga_relative {
+  position: relative;
+}
+
+.ga_svg {
+  position: absolute;
+  color: var(--color-green-transparent);
+}
+
+.ga_svg--topleft {
+  top: -12px;
+  left: -12px;
+}
+.ga_svg--topright {
+  top: -12px;
+  right: -12px;
+}
+.ga_svg--bottomleft {
+  bottom: -12px;
+  left: -12px;
+}
+.ga_svg--bottomright {
+  bottom: -12px;
+  right: -12px;
 }
 
 /* Tablet & Moblie --------------------------------------------- */
