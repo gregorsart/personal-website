@@ -45,6 +45,7 @@
   --main-layout-padding-desktop: 4rem;
   --main-gallery-gap-desktop: 2rem;
 
+  --color-green-bg-all: rgb(27, 39, 39);
   --color-green-transparent: rgba(64, 224, 208, 0.138);
 }
 
@@ -52,7 +53,7 @@
 body {
   font-family: "Rubik", sans-serif;
   font-weight: 300;
-  background-color: rgb(27, 39, 39);
+  background-color: var(--color-green-bg-all);
   color: aliceblue;
   width: auto;
   max-width: 90rem; /* 1440 px */
@@ -114,6 +115,7 @@ ul li {
 a {
   color: aqua;
   text-decoration: none;
+  border-bottom: 2px solid transparent;
 }
 
 nav a:hover,
@@ -121,6 +123,8 @@ footer a:hover {
   color: aquamarine;
   border-bottom: 2px solid orangered;
   padding-bottom: 0.3rem;
+  transition: color 0.5s ease-in-out;
+  transition: border 0.5s ease-in-out;
 }
 
 nav ul {
@@ -232,10 +236,12 @@ footer {
 
 .social-item > a:hover > :first-child:not(:last-child) {
   filter: hue-rotate(0deg) saturate(10000%);
+  transition: filter 1s ease-in-out;
 }
 
 .social-item > a:hover > :last-child {
-  filter: saturate(0) brightness(300%);
+  filter: saturate(0) contrast(2);
+  transition: filter 0.5s ease-in-out;
 }
 
 .social-item p {
